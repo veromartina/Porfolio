@@ -1,0 +1,680 @@
+/* establece un estilo predeterminado para todos los elementos, eliminando el relleno y el margen.*/
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+/*establece un fondo de color  para el cuerpo del documento.
+*/
+body {
+    background-color: #f9b248;
+    width: 100%;
+    display: flexbox;
+}
+
+/*Header- define un estilo para el encabezado con un fondo y se establece la lista dentro de la barra de navegación (nav) como un elemento flex con margen cero y sin viñetas.*/
+
+header {
+    background-color: #fa4659;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+
+.nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 1px;
+    list-style: none;
+    /* elimina los marcadores de lista, en una lista HTML.*/
+    justify-content: flex-end;
+    /*alinea los elementos de un contenedor flex en el extremo derecho del contenedor.*/
+}
+
+.nav li {
+    margin: 6px;
+    padding: 5px;
+    padding-right: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+
+    color: #0e2431;
+}
+.menu{
+    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display:flex;
+  
+}
+.menu > li {
+  display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute; /*estatico*/
+  
+  }
+  
+  
+  .submenu li {
+    display: block;
+    
+  }
+  
+  .menu > li:hover .submenu {
+    display: block;
+  }
+  .menu-hamb{
+    display: none;
+    align-content: flex-start;
+
+  }
+/*Fin header*/
+
+/*se definen estilos para un banner que contiene una imagen y contenido. 
+El contenedor del banner tiene un fondo gris claro, un ancho del 100%, y espaciado interno y externo de 5px.
+La imagen dentro del banner tiene un ancho y alto de 350px, borde redondeado de 15px y margen de 15px. 
+El contenido dentro del banner está centrado horizontalmente y alineado verticalmente.*/
+
+
+
+
+.banner-contenedor {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    /*padding-top: 5%;*/
+
+
+}
+
+.banner {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left:  -5%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.banner-img {
+
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+    /*indica que la posición del elemento se establece en relación con su posición normal*/
+    width: 300px;
+    /*establece el ancho del elemento*/
+    height: 400px;
+    /*establece el alto del elemento*/
+}
+
+.banner-img div {
+    position: absolute;
+    width: 100%;
+    /*establece el ancho del elemento*/
+    height: 100%;
+    /*establece el alto del elemento*/
+    display: flex;
+    /*establece el elemento como un contenedor flexible.*/
+    align-items: center;
+    /*establece la alineación vertical de los elementos dentro del contenedor en el centro.*/
+    justify-content: center;
+    /*establece la alineación horizontal de los elementos dentro del contenedor en el centro.*/
+    backface-visibility: hidden;
+    /*oculta la parte posterior de un elemento cuando se está realizando una transformación 3D.*/
+    transition: 2s;
+    /*establece la duración de la transición para las propiedades animadas en 1 segundo.*/
+    padding: 3%;
+    /*establece un espacio de relleno del 2% alrededor del contenido del elemento.*/
+}
+
+
+.banner-img img {
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.banner-img:hover {
+    filter: saturate(180%);
+
+}
+
+.banner-img .frente {
+
+    transform: perspective(400px) rotateY(0deg);
+    /*aplica una transformación 3D al elemento con una perspectiva de 500 píxeles y una rotación en el eje Y de 0 grados.*/
+}
+
+.banner-img:hover .frente {
+
+    transform: perspective(400px) rotateY(180deg);
+    /*aplica una transformación 3D al elemento con una perspectiva de 500 píxeles y una rotación en el eje Y de 180 grados.*/
+}
+
+.banner-img .detras {
+
+    transform: perspective(400px) rotateY(180deg);
+    /*aplica una transformación 3D al elemento con una perspectiva de 500 píxeles y una rotación en el eje Y de 180 grados.*/
+}
+
+.banner-img:hover .detras {
+
+    transform: perspective(400px) rotateY(360deg);
+    /*aplica una transformación 3D al elemento con una perspectiva de 500 píxeles y una rotación en el eje Y de 360 grados.*/
+}
+
+h1 {
+    font-size: 50px;
+
+}
+
+span {
+
+    text-align: center;
+    padding-top: 2%;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 5%;
+
+
+    /* Clip Background Image */
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 90s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+#hola,
+.presentacion {
+    width: 100%;
+    height: 300px;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.presentacion,
+p {
+    padding: 1%;
+    text-align: center;
+
+}
+
+.presentacion,
+h2 {
+    font-family: cursive;
+    font-size: x-large;
+
+}
+
+
+#conocimientos {
+
+    width: 100%;
+    display: flex;
+    margin-top: 14%;
+    height: 500px;
+
+}
+
+.contenedor-gral {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+
+}
+
+
+
+h3 {
+    font-family: sans-serif;
+    font-size: xx-large;
+    color: black;
+    font: sans-serif;
+
+}
+
+.conocimientos {
+    flex-wrap: nowrap;
+    display: flex;
+    height: 480px;
+}
+
+.subconocimientos {
+    border: solid 2px black;
+    margin: 5px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: #ff2e63;
+    -webkit-box-shadow: 0px 0px 63px 12px #ff2e63;
+    box-shadow: 0px 0px 63px 12px #ff2e63;
+
+}
+
+.subconocimientos h4 {
+    text-align: center;
+    margin: 15px;
+    font-family: cursive;
+    font-size: x-large;
+
+}
+
+
+.subconocimientos img {
+    width: 100%;
+   
+}
+.subconocimientos p {
+    font-family: 'Courier New';
+    color:  #537780;
+}
+
+.subconocimientos p:hover {
+    font-size: x-large;
+    color: black;
+}
+
+.logo, .logo1, .logo2 {
+    height: 240px;
+
+}
+
+#logros {
+
+    width: 100%;
+    margin-top: 7%;
+    margin-block-end: 2%;
+    margin-left: 1%;
+    height: 200px;
+}
+
+.contenedor-logros {
+    width: 100%;
+    display: flex;
+    /* padding: 1%; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+
+}
+
+.container, .cont-logros, .form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    /*padding: -10%;*/
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+.certificados {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.curso {
+    border: solid 2px black;
+    margin: 5px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+
+    box-shadow: #ff2e63;
+    -webkit-box-shadow: 0px 0px 63px 12px #ff2e63;
+    box-shadow: 0px 0px 63px 12px #ff2e63;
+}
+
+.curso p {
+    font-family: 'Courier New';
+    color: #537780;
+    font-size: 14px;
+}
+
+.curso p:hover {
+
+    font-size:x-large;
+    color:black;
+}
+
+.curso h4 {
+   text-align: center;
+    margin: 3px;
+    font-family: cursive;
+}
+
+
+
+
+
+#contacto {
+    width: 100%;
+    margin-top: 45%;
+    
+    margin-left: 1%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+    
+
+.form{
+    width: 100%;
+    display: flex;
+    margin-top: 7%;
+
+}
+.formulario{
+    width: 90%;
+
+    display: flex;
+    border: 1px solid blak;
+    margin-top: -1%;
+   
+    box-shadow: #ff2e63;
+    -webkit-box-shadow: 0px 0px 63px 12px #ff2e63;
+    box-shadow: 0px 0px 63px 12px #ff2e63;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.fila{
+    width: 100%;
+    margin: 15px 0;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    width: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-cont{
+    background-color:  #eeeeee;
+    height: 30px;
+    margin: 3px;
+    border-radius: 10px;
+    border:1px solid black;
+    padding :0 10px;
+    width: 300px;
+    
+}
+.motivo{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 5%;
+
+}
+.text-input{
+    height: 300px;
+    width: 100%;
+    background-color:  #eeeeee;
+}
+
+.redes{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes p{
+    color: black;
+    font-size: larger; 
+    margin-right: 5%;
+}
+
+.redes i{
+    margin-right: 10%;
+    margin-left: -4%;
+}
+
+.cont-submit{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 8%;
+    margin: -4%;
+}
+
+.btn-enviar{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer {
+    background-color: #fa4659;
+    color: #0d0e0d;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+
+}
+
+@media all and (max-width:480px) {
+    header {
+    background-color: #fa4659;
+    border-radius: 0px;
+    margin: 1px;
+}
+
+.menu i{
+    color:#537780;
+}
+.submenu li a{
+    
+    color:#537780;
+}
+    
+    .menu-hamb {
+      display: block;
+      flex-direction:column;
+      justify-content: center;
+    }
+    .menu{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      list-style-type: none;
+    
+    }
+    
+    .menu a {
+        color: rgb(10, 10, 10);
+    }
+    .submenu a{
+        font-size: 15px;
+    }
+    .nav{
+    display: none;
+    }
+    span{
+        display: flex;
+        justify-content: flex-end;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    
+    .menu-hamb{
+        display:block;
+    }
+    .banner-img img {
+        width: 300px;
+        height: 300px;
+
+    }
+    .presentacion,
+h2 {
+   
+    font-size: medium;
+
+}  
+.conocimientos {
+    display: inline-block;
+    width: 200%;
+    height: 380px;
+} 
+.contenedor-logros {
+    padding-top: 110%;
+    margin-top: 60%;
+    display: inline-flex;
+    justify-content: flex-start;
+}
+.curso{
+    width: 80%;
+    height: 90%;
+}
+
+#contacto {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-block: 350%;
+    flex-direction: column;
+    align-items: center;
+    margin-block-end: 20%;
+}
+footer{
+    margin-top:-10%;
+}
+
+}
+
+/*@media all and (max-width:800px) {
+    .menu-ham{
+        display: none;
+    }
+    .nav ul {
+        justify-content: space-around;
+    }
+
+    .banner-contenedor {
+        justify-content: space-around;
+    }
+
+    .conocimin {
+        justify-content: space-around;
+    }
+
+    .cont-gral {
+        width: 80%;
+        display: flex;
+        padding: 5%;
+        flex-wrap: wrap;
+        }
+    .curso{
+        height: 250px;
+        width: 30%;
+    }
+        .curso,
+        p {
+            font-size: xx-small;
+        }
+    .presentacion, p{
+        font-size: small;
+    }
+    #contacto{
+        
+        margin-top: 70%;
+    }
+    }
+    .contenedor-logros{
+        display:flex;
+    }
+    .form{
+        margin-top: -25%;
+    }
+    .formulario{
+        margin-top: -15%;
+    }
+    
+
+/*@media all and (max-width:769px) {
+    .menu-ham{
+        display: none;
+    }
+
+    .cont-logros{
+        margin-top: -8%;
+    
+    }
+
+    #contacto{
+        margin-top: 60%;
+    }
+    
+    .log, .log1, .logo2{
+        height: 140px;
+
+    }
+    .form{
+        margin-top: -4%;
+    }
+    .formulario{
+        margin-top: -3%;
+    }
+    
+}
