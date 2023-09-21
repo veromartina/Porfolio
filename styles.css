@@ -48,38 +48,43 @@ a:hover {
 
     color: #0e2431;
 }
-.menu{
+
+.menu {
     list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  display:flex;
-  
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+
 }
-.menu > li {
-  display: inline-block;
+
+.menu>li {
+    display: inline-block;
 }
 
 .submenu {
     display: none;
-    position: absolute; /*estatico*/
-  
-  }
-  
-  
-  .submenu li {
+    position: absolute;
+    /*estatico*/
+
+}
+
+
+.submenu li {
     display: block;
-    
-  }
-  
-  .menu > li:hover .submenu {
+
+}
+
+.menu>li:hover .submenu {
     display: block;
-  }
-  .menu-hamb{
+}
+
+.menu-hamb {
     display: none;
     align-content: flex-start;
 
-  }
+}
+
 /*Fin header*/
 
 /*se definen estilos para un banner que contiene una imagen y contenido. 
@@ -105,7 +110,7 @@ El contenido dentro del banner está centrado horizontalmente y alineado vertica
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left:  -5%;
+    margin-left: -5%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -308,11 +313,12 @@ h3 {
 
 .subconocimientos img {
     width: 100%;
-   
+
 }
+
 .subconocimientos p {
     font-family: 'Courier New';
-    color:  #537780;
+    color: #537780;
 }
 
 .subconocimientos p:hover {
@@ -320,7 +326,9 @@ h3 {
     color: black;
 }
 
-.logo, .logo1, .logo2 {
+.logo,
+.logo1,
+.logo2 {
     height: 240px;
 
 }
@@ -344,7 +352,9 @@ h3 {
 
 }
 
-.container, .cont-logros, .form {
+.container,
+.cont-logros,
+.form {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -384,44 +394,42 @@ h3 {
 
 .curso p:hover {
 
-    font-size:x-large;
-    color:black;
+    font-size: x-large;
+    color: black;
 }
 
 .curso h4 {
-   text-align: center;
+    text-align: center;
     margin: 3px;
     font-family: cursive;
 }
 
 
-
-
-
 #contacto {
     width: 100%;
     margin-top: 45%;
-    
+
     margin-left: 1%;
     display: flex;
     flex-wrap: wrap;
 
 }
-    
 
-.form{
+
+.form {
     width: 100%;
     display: flex;
     margin-top: 7%;
 
 }
-.formulario{
+
+.formulario {
     width: 90%;
 
     display: flex;
     border: 1px solid blak;
     margin-top: -1%;
-   
+
     box-shadow: #ff2e63;
     -webkit-box-shadow: 0px 0px 63px 12px #ff2e63;
     box-shadow: 0px 0px 63px 12px #ff2e63;
@@ -429,7 +437,7 @@ h3 {
     margin-right: 10%;
 }
 
-.fila{
+.fila {
     width: 100%;
     margin: 15px 0;
     flex-direction: row;
@@ -438,7 +446,7 @@ h3 {
     justify-content: center;
 }
 
-.col{
+.col {
     width: 420px;
     display: flex;
     flex-wrap: wrap;
@@ -447,48 +455,50 @@ h3 {
     align-items: center;
 }
 
-.input-cont{
-    background-color:  #eeeeee;
+.input-cont {
+    background-color: #eeeeee;
     height: 30px;
     margin: 3px;
     border-radius: 10px;
-    border:1px solid black;
-    padding :0 10px;
+    border: 1px solid black;
+    padding: 0 10px;
     width: 300px;
-    
+
 }
-.motivo{
+
+.motivo {
     flex-direction: column;
     display: flex;
     align-items: center;
     margin: 5%;
 
 }
-.text-input{
+
+.text-input {
     height: 300px;
     width: 100%;
-    background-color:  #eeeeee;
+    background-color: #eeeeee;
 }
 
-.redes{
+.redes {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.redes p{
+.redes p {
     color: black;
-    font-size: larger; 
+    font-size: larger;
     margin-right: 5%;
 }
 
-.redes i{
+.redes i {
     margin-right: 10%;
     margin-left: -4%;
 }
 
-.cont-submit{
+.cont-submit {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -497,7 +507,7 @@ h3 {
     margin: -4%;
 }
 
-.btn-enviar{
+.btn-enviar {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -515,166 +525,211 @@ footer {
 
 }
 
-@media all and (max-width:480px) {
-    header {
-    background-color: #fa4659;
-    border-radius: 0px;
-    margin: 1px;
+
+/*Media Queries */
+
+
+@media all and (max-width:900px) {
+    #conocimientos {
+        margin-top: 30%;
+    }
+
+    .conocimientos {
+        height: auto;
+    }
+
+    .curso {
+        height: auto;
+    }
+
+    .form {
+        margin-top: 30%;
+    }
+
+    .form {
+        margin-top: 50%;
+    }
+
 }
 
-.menu i{
-    color:#537780;
+
+
+@media all and (max-width:768px) {
+    .menu-ham {
+        display: none;
+    }
+
+    .nav ul {
+        justify-content: space-around;
+    }
+
+    #hola {
+        display: block;
+
+    }
+
+    .presentacion p {
+        margin: left -4px;
+        font-size: large;
+    }
+
+    #conocimientos {
+        display: inline-flex;
+    }
+
+    .contenedor-gral {
+        width: 90%;
+        display: flex;
+
+    }
+
+    .conocimientos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .subconocimientos {
+        width: 45%;
+    }
+
+    #logros {
+        margin-top: 80%;
+    }
+
+    .curso {
+        display: grid;
+        justify-content: center;
+        align-items: start;
+        width: 30%;
+    }
+
+    #contacto {
+        margin-top: 60%;
+    }
 }
-.submenu li a{
-    
-    color:#537780;
+
+@media all and (max-width:600px) {
+    .cont-logros {
+        margin-top: 10%;
+    }
+
+    .form {
+        margin-top: 60%;
+    }
 }
-    
+
+
+
+
+
+@media all and (max-width:480px) {
+    header {
+        background-color: #fa4659;
+        border-radius: 0px;
+        margin: 1px;
+    }
+
+    .menu i {
+        color: #537780;
+    }
+
+    .submenu li a {
+
+        color: #537780;
+    }
+
     .menu-hamb {
-      display: block;
-      flex-direction:column;
-      justify-content: center;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
     }
-    .menu{
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      list-style-type: none;
-    
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style-type: none;
+
     }
-    
+
     .menu a {
         color: rgb(10, 10, 10);
     }
-    .submenu a{
+
+    .submenu a {
         font-size: 15px;
     }
-    .nav{
-    display: none;
+
+    .nav {
+        display: none;
     }
-    span{
+
+    span {
         display: flex;
         justify-content: flex-end;
     }
+
     h1 {
         font-size: 30px;
     }
-    
-    .menu-hamb{
-        display:block;
+
+    .menu-hamb {
+        display: block;
     }
+
     .banner-img img {
         width: 300px;
         height: 300px;
 
     }
+
+    .frente,
+    .detras {
+        width: 300px;
+        height: 300px;
+    }
+
     .presentacion,
-h2 {
-   
-    font-size: medium;
+    h2 {
 
-}  
-.conocimientos {
-    display: inline-block;
-    width: 200%;
-    height: 380px;
-} 
-.contenedor-logros {
-    padding-top: 110%;
-    margin-top: 60%;
-    display: inline-flex;
-    justify-content: flex-start;
-}
-.curso{
-    width: 80%;
-    height: 90%;
-}
+        font-size: medium;
 
-#contacto {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-block: 350%;
-    flex-direction: column;
-    align-items: center;
-    margin-block-end: 20%;
-}
-footer{
-    margin-top:-10%;
-}
-
-}
-
-/*@media all and (max-width:800px) {
-    .menu-ham{
-        display: none;
-    }
-    .nav ul {
-        justify-content: space-around;
     }
 
-    .banner-contenedor {
-        justify-content: space-around;
+    .conocimientos {
+        display: inline-block;
+        width: 200%;
+        height: 380px;
     }
 
-    .conocimin {
-        justify-content: space-around;
+    #logros {
+        margin-top: 10%;
     }
 
-    .cont-gral {
-        width: 80%;
-        display: flex;
-        padding: 5%;
-        flex-wrap: wrap;
-        }
-    .curso{
-        height: 250px;
-        width: 30%;
-    }
-        .curso,
-        p {
-            font-size: xx-small;
-        }
-    .presentacion, p{
-        font-size: small;
-    }
-    #contacto{
-        
-        margin-top: 70%;
-    }
-    }
-    .contenedor-logros{
-        display:flex;
-    }
-    .form{
-        margin-top: -25%;
-    }
-    .formulario{
-        margin-top: -15%;
-    }
-    
-
-/*@media all and (max-width:769px) {
-    .menu-ham{
-        display: none;
-    }
-
-    .cont-logros{
-        margin-top: -8%;
-    
-    }
-
-    #contacto{
+    .contenedor-logros {
+        padding-top: 110%;
         margin-top: 60%;
+        display: inline-flex;
+        justify-content: flex-start;
     }
-    
-    .log, .log1, .logo2{
-        height: 140px;
 
+    .curso {
+        width: 80%;
+        height: 90%;
     }
-    .form{
-        margin-top: -4%;
+
+    #contacto {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-block: 350%;
+        flex-direction: column;
+        align-items: center;
+        margin-block-end: 20%;
     }
-    .formulario{
-        margin-top: -3%;
+
+    footer {
+        margin-top: -10%;
     }
-    
+
 }
