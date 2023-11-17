@@ -269,6 +269,7 @@ h2 {
     flex-direction: column;
     padding: 1%;
 
+
 }
 
 
@@ -407,7 +408,7 @@ h3 {
 
 #contacto {
     width: 100%;
-    margin-top: 45%;
+    margin-top: 50%;
 
     margin-left: 1%;
     display: flex;
